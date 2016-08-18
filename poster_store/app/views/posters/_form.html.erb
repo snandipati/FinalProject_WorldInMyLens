@@ -1,0 +1,37 @@
+<!--Team No:11
+Date of submission: 6/6/2014
+Description: Default code generated on rails scaffold-->
+
+<%= form_for(@poster) do |f| %>
+  <% if @poster.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@poster.errors.count, "error") %> prohibited this poster from being saved:</h2>
+
+      <ul>
+      <% @poster.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :image_url %><br>
+    <%= f.text_field :image_url %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

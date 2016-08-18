@@ -1,0 +1,27 @@
+<!--Team No:11
+Date of submission: 6/6/2014
+Description: Default code generated on rails scaffold-->
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @poster.title %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @poster.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @poster.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @poster.image_url %>
+</p>
+<%= link_to 'Edit', edit_poster_path(@poster) %> |
+<%= link_to 'Back', posters_path %>

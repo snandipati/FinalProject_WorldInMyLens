@@ -1,0 +1,30 @@
+// Place all the styles related to the Store controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#desc_index
+{
+  text-align: left;
+  font-weight: normal;
+  background: #fff;
+  margin: 20 px;
+  width: 440px;
+  height: 480px;
+  color: #000;
+  float: left;
+  border: 0.5px solid #333;
+}
+
+#desc_show
+{ 
+  
+  font-weight: normal;
+  background: #fff;
+  margin: 0 px;
+  width: 550px;
+  height: 350px;
+  color: #000;
+  float: left;
+  border: 1px solid #333;
+}

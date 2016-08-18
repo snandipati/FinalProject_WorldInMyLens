@@ -1,0 +1,51 @@
+<!--Team No:11
+Date of submission: 6/6/2014
+Description: WorldInMyLens shop page to list the posters-->
+<!DOCTYPE html>
+<html>
+<head>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+</head>
+<body>
+	<% if current_user %>
+		Signed in as <strong><%= current_user.name %></strong>!
+		<%= link_to "Sign out", signout_path, id: "sign_out" %>
+	<% end %>
+
+	<% if notice %>
+		<p id="notice"><%= notice %></p>
+	<% end %>
+
+	<br><br>
+	<div class="cart_title"><center><h2>Your Shopping Cart</h2></center></div>
+	<br><br>
+	<table>
+		<% for item in @cart.line_items %>
+			<tr><%= image_tag item.poster.image_url, size:"100x100" %>&nbsp;&nbsp;</tr>
+			<tr>
+			<td><%= item.quantity %>&times;</td>
+			<td><%= item.poster.title %></td>
+			<td class="item_price"><%= number_to_currency(item.total_price) %></td>
+			</tr>
+		<% end %>
+		<tr class="total_line">
+		<td colspan="2"><b>Total</b></td>
+		<td class="total_cell"><b><%= number_to_currency(@cart.total_price) %></b></td>
+		</tr>
+	</table>
+	<br>
+	<% if current_user %>
+		<%= button_to "Proceed to Checkout" , new_order_url, :method=>:get %><br>
+	<%else%>
+		<%= link_to "Sign in with Facebook for Checkout", "/auth/facebook", id: "sign_in" %><br><br>
+	<%end%>
+
+	<%= link_to 'Continue shopping', store_path%><br><br>
+		<center><p class="copy_powered">&copy;2014 Worldinmylens  All rights reserved.</center> 
+</body>
+</html>
+
+
+

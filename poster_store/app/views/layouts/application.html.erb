@@ -1,0 +1,50 @@
+<!--Team No:11
+Date of submission: 6/6/2014
+Description: WorldInMyLens layout code: main menu and the page layout, all html files yeild from this file-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> WorldInMyLens </title>
+			<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+			<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+			<%= csrf_meta_tags %>
+		<style>
+			p.sans{font-family:"Comic Sans MS", cursive, sans-serif;}
+		</style>
+	</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<h1>
+				<%= @page_title || "WorldInMyLens" %>
+			</h1>		
+		</div>
+	</div>
+		<p class="sans"><font size="14" style="float:center; margin:0px 0px 0px 450px; border:2">WorldInMyLens</font></p>
+	<br>
+		<div id="navigation">
+		<ul>
+			<li><a href="http://localhost:3000/home/index">Home</a></li>
+			<li><a href="http://localhost:3000/about/index">About</a></li>
+			<li><a href="http://localhost:3000/store">Shop</a></li>
+			<li><a href="http://localhost:3000/scraping/index">Personalized Gifts</a></li>
+			<li><a href="http://localhost:3000/meet/index">MeetUs</a></li>
+			<li><a href="http://localhost:3000/learn/index">Learn!</a></li>			
+			<li><a href="http://localhost:3000/locations">OurStoreLocations</a></li>
+			<li><a href="http://localhost:3000/contact/index">Contact us</a></li>			
+		</ul>
+	</div>
+	<br><br><br>
+
+<%= yield %>
+
+<br><br><br>
+</div>
+		
+		
+
+
+</body>
+</html>
+

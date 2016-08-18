@@ -1,0 +1,43 @@
+<!--Team No:11
+Date of submission: 6/6/2014
+Description: WorldInMyLens sign out from facebook, page designed similar to home page-->
+
+<p>Successfully signed out!</p>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+</head>
+<body>
+	<% if current_user %>
+    Signed in as <strong><%= current_user.name %></strong>!
+    <%= link_to "Sign out", signout_path, id: "sign_out" %>
+	<% end %>
+	<div id="container">
+		<div id="header">
+			<h1>
+				<%= @page_title || "WorldInMyLens" %>
+			</h1>
+		</div>
+	</div>
+	<div id="navigation">
+		<ul>
+			<li><a href="http://localhost:3000/home/index">Home</a></li>
+			<li><a href="http://localhost:3000/about/index">About</a></li>
+			<li><a href="http://localhost:3000/store">Shop</a></li>
+			<li><a href="http://localhost:3000/scraping/index">Personalized Gifts</a></li>
+			<li><a href="http://localhost:3000/meet/index">MeetUs</a></li>
+			<li><a href="http://localhost:3000/learn/index">Learn!</a></li>			
+			<li><a href="http://localhost:3000/locations">OurStoreLocations</a></li>
+			<li><a href="http://localhost:3000/contact/index">Contact us</a></li>	
+		</ul>
+	</div>
+	<div id="main">
+		<%= yield %>
+	</div>
+</body>
+</html>
+

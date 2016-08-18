@@ -1,0 +1,40 @@
+<!--Team No:11
+Date of submission: 6/6/2014
+Description: WorldInMyLens store page: Displays the list of posters-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<% if current_user %>
+			Signed in as <strong><%= current_user.name %></strong>!
+			<%= link_to "Sign out", signout_path, id: "sign_out" %>
+		<% end %>
+		<% if notice %>
+			<p id="notice"><%= notice %></p>
+		<% end %>
+		<% @posters.each do |poster| %>
+			<div id="desc_index"><ul>
+				<%= image_tag poster.image_url, size:"300x300" %>
+				<div class="entry" style="font-size:2.5em">
+					<p><b><%= poster.title %></b><br><%= truncate(strip_tags(poster.description), :length => 150) %><br></p>
+				</div>
+				<div class= "price_line">
+					<span class="price"><%= number_to_currency(poster.price) %></span><br>
+					<%= button_to 'Add to Cart',line_items_path(poster_id: poster) %>
+				</div>
+			</div>
+		<% end %>
+		<center><p class="copy_powered">&copy;2014 Worldinmylens  All rights reserved.</h4></center> 
+	</body>
+</html>
+
+
+
+
+
+

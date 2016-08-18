@@ -1,0 +1,49 @@
+<!--Team No:11
+Date of submission: 6/6/2014
+Description: WorldInMyLens about page-->
+<!DOCTYPE html>
+<html>
+<head>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <style>
+		html, body
+		{
+			height: 100%;
+		}
+		.content
+		{
+			min-height: 100%;
+		}
+		.footer
+		{
+			position: relative;
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<% if current_user %>
+    Signed in as <strong><%= current_user.name %></strong>!
+    <%= link_to "Sign out", signout_path, id: "sign_out" %>
+	<% end %>
+<h2> About Us </h2>
+<br><br>
+<p>Worldinmylens has been Northern California's Premier Poster Gallery since 2010.
+Our 3,000 square foot warehouse is stocked with rare and hard to find images captured from across the world. We carry a complete line of popular, contemporary posters including art and rare landscape posters.</p>
+
+<p>We believe we have some of the most talented photographers inside our studios. They have been in the field for over 15 years.Please do bear in mind that each of our photos have been created through months and years of travel, some smooth and some not-so-smooth. It has taken a team work of passion and dedication in creating the final images so that they capture the spirit and the integrity of the original work of art.
+If you choose to order a print it needs 5-7 days for production; Pleas keep that in mind while ordering your prints.</p>
+
+<p> We offer specialized prints on Canvas, Metal, As wall-art etc.. Our prints for sale are waterproof, Canvas Giclee, produced on state-of-the-art, professional-grade Epson printers. We use acid-free canvas with archival inks to guarantee that your prints last a lifetime without fading or loss of color.</p>
+
+<p> For the convenience of our values customers, we offer on-line purchase and minimum delivery charges. For those who want to have the experience of a walk-in store, we have two stores opened in heart of South bay and in the Cultural district of San Francisco</p> 
+
+<p> Every art print includes a 2.5" white border to allow for future stretching on stretcher bars. We have experienced photographers to inspect and make sure these prints aspire to the level of museum quality. If you want to see how amazing they are, why not give us a try!</p><br>
+
+</p>
+<center><p class="copy_powered">&copy;2014 Worldinmylens  All rights reserved.</h4></center> 
+</body>
+</html>
+

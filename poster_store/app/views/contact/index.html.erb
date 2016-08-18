@@ -1,0 +1,58 @@
+<!--Team No:11
+Date of submission: 6/6/2014
+Description: WorldInMyLens contact us page-->
+<!DOCTYPE html>
+<html>
+<head>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+</head>
+<body>
+	<% if current_user %>
+		Signed in as <strong><%= current_user.name %></strong>!
+		<%= link_to "Sign out", signout_path, id: "sign_out" %>
+	<% end %>
+
+	<p><h3><p><font size="4"><strong><center>Contact Us</center></font></h3></p>
+
+	</h2></p><form action = "http://localhost:3000/contact/show"><table width="100%" border="0" cellpadding="2" cellspacing="3">
+		  <tr> 
+			<td width="100%" colspan=2 align="left">Complete the information below, and then click the 'Send' button to leave your message to us.
+			Thank you.
+			</td>
+		 </tr>
+		 <tr> 
+			<td align="right">First Name:</td><td><input type="text" name="firstname" class="input InputText"></td>
+		  </tr>
+		  <tr> 
+			<td align="right">Last Name: </td><td><input type="text" name="lastname" class="input InputText"></td>
+		  </tr>
+		  <tr> 
+			<td align="right">Email address: </td><td><input type="email" name="email" class="input InputText"></td>
+		  </tr>
+		  <tr> 
+			<td align="right">Your Phone: </td><td><input type="text" name="phone" class="input InputText"></td>
+		  </tr>
+		  <tr> 
+			<td align="right">Message: </td><td><textarea name=Message style="margin-left:3px;padding:3px;border:#77B7DD 1px solid;margin:3px;width:297px;height:120px" placeholder=""></textarea></td>
+		  </tr>
+		  <tr>
+			<td colspan=2 align=center height="35">
+			<input type="submit" name="Submit" value=" Send " class=button>
+			&nbsp;&nbsp;&nbsp;&nbsp; 
+		  </tr>
+    	  <tr>
+			<td colspan=2>
+			<div style="margin:5px 0 5px 0;width:100%;height:35px;line-height:35px;border-bottom:#999 1px solid;border-top:#999 1px solid;">
+			E-mail: sale@worldinmylens.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone: +405 <n/>926 0<p style='display:none'></p>46<v/>6<v/></div>
+			<p> <center><div style="font-size:14px;">A place to shop nice artwork without breaking your banks!
+			Please note that we can produce more than what we have listed. </div></td></center></p>
+		</tr>
+		</table>
+	</form>
+      
+	<center><h4><p>Comments, questions, opinions? &nbsp;&nbsp;Contact us at info@worldinmylens.com<br>
+	Find us on Facebook: www.facebook.com/Worldinmylens<br><p class="copy_powered">&copy;2014 Worldinmylens  All rights reserved.</h4></center>
+  </body>
+</html>

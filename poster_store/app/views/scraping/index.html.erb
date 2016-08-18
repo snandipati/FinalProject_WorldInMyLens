@@ -1,0 +1,26 @@
+<!--Team No:11
+Date of submission: 6/6/2014
+Description: WorldInMyLens Personalized Gifts page, displays the scraped images-->
+
+<html>
+	<body>
+		<% if current_user %>
+			Signed in as <strong><%= current_user.name %></strong>!
+			<%= link_to "Sign out", signout_path, id: "sign_out" %>
+		<% end %>
+		<center><h3>“Want to create personalized gifts? Watch this space for more details. Service will be made available shortly”</h3>
+		<table align="center">
+			<tr>
+				<td><img  src=<%= @img1 %> width ="300" height="300"><h3>Half dome yosemite national <br>park coaster</h3></td>
+				<td><img  src=<%= @img2 %> width ="300" height="300" ><h3>Tuscany Italy mugs</h3></td>
+			</tr>
+			<tr>
+				<td><img  src=<%= @img3 %> width ="300" height="300" ><h3>Lake Eola park fountain Orlando <br>Cocktail Shaker</h3></td>
+				<td><img  src=<%= @img4 %> width ="300" height="300" ><h3>Multnomah falls Oregon Apron</h3></td>
+			</tr>
+		</table>
+	</body>
+</html>
+
+<center><p class="copy_powered">&copy;2014 Worldinmylens  All rights reserved.</p></center> 
+

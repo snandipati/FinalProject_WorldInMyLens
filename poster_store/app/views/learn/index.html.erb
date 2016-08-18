@@ -1,0 +1,70 @@
+<!--Team No:11
+Date of submission: 6/6/2014
+Description: WorldInMyLens Learn: To display events and redirection to the facebook page-->
+
+	<% if current_user %>
+		Signed in as <strong><%= current_user.name %></strong>!
+		<%= link_to "Sign out", signout_path, id: "sign_out" %>
+	<% end %>
+	<h2>Come Learn with Us!!!</h2>
+	<strong>Upcoming Events:</strong> <br />
+<style>
+	table, td, th
+	{
+		border:1px solid black;
+	}
+	th
+	{
+		background-color:#B2CCCC;
+		color:black;
+	}
+	table
+	{
+		border-collapse:collapse;
+	}
+	table
+	{
+		width:80%;
+	}
+	th
+	{
+		height:40px;
+	}
+</style>
+<table border = "1">
+  <thead>
+    <tr>
+     <th>Event Name</th>
+     <th>Date and Time</th>
+    </tr>
+  </thead>
+  <tbody>
+     <% @upcoming_events.each do |event| %>
+	<tr>
+        <td> <%= event.name %></td>
+        <td><%= event.start_time %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<br><br>
+<strong>Past Events:</strong> <br />
+<table border = "1">
+  <thead>
+    <tr>
+     <th>Event Name</th>
+	 <th>Date and Time</th>
+    </tr>
+  </thead>
+  <tbody>
+     <% @past_events.each do |event| %>
+	<tr>
+        <td> <%= event.name %></td>
+        <td><%= event.start_time %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>  
+<br><br>
+<a href="https://www.facebook.com/pages/Worldinmylens/1884266041712302">Click here</a> to know more about our events<br><br>
+<center><p class="copy_powered">&copy;2014 Worldinmylens  All rights reserved.</p></center> 

@@ -1,0 +1,44 @@
+<!--Team No:11
+Date of submission: 6/6/2014
+Description: WorldInMyLens home page, the slider effects for the page are included here -->
+
+<!DOCTYPE html>
+<html>
+<head> 
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+	<link rel="stylesheet" href="/assets/page.css">
+	<link rel="stylesheet" href="/assets/anythingslider.css">
+	<script src="/assets/jquery.anythingslider.js"></script>
+	<style>
+		#slider { width: 1000px; height: 500px; }
+	</style>
+	<script>
+		// DOM Ready
+		$(function(){
+			$('#slider').anythingSlider();
+		});
+	</script>
+</head>
+<body>
+	<% if current_user %>
+		Signed in as <strong><%= current_user.name %></strong>!
+		<%= link_to "Sign out", signout_path, id: "sign_out" %>
+	<% end %>
+	<ul id="slider">
+		<img src="/assets/img1.jpg" alt="">
+		<img src="/assets/img2.jpg" alt="">
+		<img src="/assets/img3.jpg" alt="">
+		<img src="/assets/img4.jpg" alt="">
+	</ul>
+	<div id="main">
+		<%= yield %>
+	</div>
+	<center><p class="copy_powered">&copy;2014 Worldinmylens  All rights reserved.</h4></center> 
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,14 @@
+ production: &defaults
+   app_id: 583380458443787
+   client_id: 583380458443787
+   client_secret: 0b6670c85049dbf88b43d67bd6df7c46
+   perms: offline_access,manage_pages
+   page_id: 1884266041712302
+   #100008104216462
+ 
+ test:
+  <<: *defaults
+
+
+development:
+  <<: *defaults

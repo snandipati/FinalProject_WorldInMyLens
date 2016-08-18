@@ -1,0 +1,89 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ 
+
+   
+ #container
+{
+	margin: 0 px;
+	
+	color: #FFF;
+}
+
+#header
+{
+	
+	padding: 0px;
+	border-radius: 0px;
+}
+
+#header h1 { margin: 0; }
+
+#navigation
+{
+	margin: 0 px;
+	float: left;
+	width: 100%;
+	background: #333;
+}
+
+#navigation ul
+{
+	margin: 0;
+	padding: 0;
+}
+
+#navigation ul li
+{
+	list-style-type: none;
+	display: inline;
+}
+
+#navigation li a
+{
+	display: block;
+	float: left;
+	padding: 5px 10px;
+	color: #fff;
+	text-decoration: none;
+	border-right: 1px solid #fff;
+}
+
+#navigation li a:hover { background: #336699; }
+
+#content
+{
+	color: #fff;
+	margin: 0 30px;
+	clear: left;
+	padding: 20px;
+}
+
+#content h2
+{
+	color: #fff;
+	font-size: 160%;
+}
+
+#footer
+{
+	margin: 0 px;
+	background: #000;
+	color: #fff;
+	position: relative;
+	padding: 20px;
+	width: 97%;
+}

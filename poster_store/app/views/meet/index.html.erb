@@ -1,0 +1,57 @@
+<!--Team No:11
+Date of submission: 6/6/2014
+Description: WorldInMyLens MeetUs page: Events from the meetup api are displayed in a table-->
+
+ <% if current_user %>
+    Signed in as <strong><%= current_user.name %></strong>!
+    <%= link_to "Sign out", signout_path, id: "sign_out" %>
+ <% end %>
+ <h2> Meet us here... </h2>
+<style>
+	table, td, th
+	{
+		border:1px solid black;
+	}
+	th
+	{
+		background-color:#B2CCCC;
+		color:black;
+	}
+	table
+	{
+		border-collapse:collapse;
+	}
+	table
+	{
+		width:100%;
+	}
+	th
+	{
+		height:50px;
+	}
+</style>
+<table border="1">
+  <thead>
+    <tr>
+	 <th>No.</th>
+     <th>Event Name</th>
+	 <th>Venue</th>
+	 <th>Time</th>
+	 <th>Register</th>
+    </tr>
+  </thead>
+<% @event_no = 1%>
+  <tbody>
+    <% for index in 0...@name.size %>
+	<tr>
+		<td><%= @event_no %></td>
+        <td><%= @name[index] %></td>
+        <td><%= @venue_name[index] %></td>
+		<td><%= Time.at(@time[index].to_i/1000).strftime("%m/%d/%Y") %></td>		
+        <td><a href=<%= @event_url[index] %>><%= @event_url[index] %></a></td>
+		<% @event_no = @event_no + 1 %>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<center><p class="copy_powered">&copy;2014 Worldinmylens  All rights reserved.</p></center> 
